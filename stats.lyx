@@ -233,5 +233,47 @@ We can also say that
 .
 \end_layout
 
+\begin_layout Subsection
+Least squares approximation
+\end_layout
+
+\begin_layout Standard
+The usual way to find the line of best fit is to use least squares sum:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}_{1}=\frac{\sum(x_{i}-\bar{x})(y_{1}-\bar{y})}{\sum(x_{i}-\bar{x})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{\beta}_{0}=\bar{y}-\hat{\beta}_{1}\bar{x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is the slope and 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+ is the intercept of the regression line.
+\end_layout
+
 \end_body
 \end_document
