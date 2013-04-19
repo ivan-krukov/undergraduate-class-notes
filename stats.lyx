@@ -1,0 +1,237 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass report
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Simple linear regression and correlation
+\end_layout
+
+\begin_layout Standard
+The two techniques are closely related but different.
+ Regression is the to predict the dependent variable on the basis of the
+ independent.
+ Correlation seeks to quantify the amount of relationship between the dependent
+ and independent variables.
+\end_layout
+
+\begin_layout Section
+Regression
+\end_layout
+
+\begin_layout Standard
+We usually talk about the regression of 
+\emph on
+Y on X
+\emph default
+.
+ Here, 
+\begin_inset Formula $X$
+\end_inset
+
+ is the independent variable which we have control of.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ is the dependent, or respondent variable, which we measure as an outcome.
+\end_layout
+
+\begin_layout Subsection
+Assumptions
+\end_layout
+
+\begin_layout Enumerate
+Values of 
+\begin_inset Formula $X$
+\end_inset
+
+ are fixed, in a sense that we define them 
+\emph on
+i.e 
+\emph default
+
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\emph on
+nonrandom.
+\end_layout
+
+\begin_layout Enumerate
+There is no error in the measurement of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $X$
+\end_inset
+
+, there is a corresponding subpopulation of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ We assume normality for each of those subpopulations.
+\end_layout
+
+\begin_layout Enumerate
+The variances of each of subpopulations of 
+\begin_inset Formula $Y$
+\end_inset
+
+ are equal to 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The means of the subpopulations all lie on the straight line 
+\begin_inset Formula $\mu_{y|x}=\beta_{0}+\beta_{1}x$
+\end_inset
+
+.
+ This is the assumption of lineriality.
+ 
+\begin_inset Formula $\beta_{0}$
+\end_inset
+
+ is the y-intercept and 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ is the slope.
+ The two paraeters are referred to as 
+\emph on
+regression coefficients.
+\end_layout
+
+\begin_layout Enumerate
+The 
+\begin_inset Formula $Y$
+\end_inset
+
+ values are statistically independent 
+\emph on
+i.e 
+\emph default
+values of 
+\begin_inset Formula $Y$
+\end_inset
+
+ for some 
+\begin_inset Formula $X$
+\end_inset
+
+ are independent of values chosen for any other 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The regression model is summarized in the following equation: 
+\begin_inset Formula $y=\beta_{0}+\beta_{1}x+\epsilon$
+\end_inset
+
+, where 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is the 
+\emph on
+error term
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+We can also say that
+\begin_inset Formula $\epsilon=y-\mu_{y|x}$
+\end_inset
+
+, where 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is the amount by which some 
+\begin_inset Formula $y$
+\end_inset
+
+ deviates from the mean of the subpopulation.
+ Since we assume that each subpopulation is normally distributed with equal
+ variances, the error terms are also normally distributed with variance
+ 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
