@@ -28,7 +28,7 @@
 \spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_amsmath 1
 \use_esint 1
 \use_mhchem 1
@@ -43,6 +43,13 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 1cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\headheight 1.5cm
+\headsep 1.5cm
+\footskip 1.5cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -50,7 +57,8 @@
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle empty
+\bullet 0 0 10 -1
 \tracking_changes false
 \output_changes false
 \html_math_output 0
