@@ -44,20 +44,15 @@
 \color #008000
 \end_index
 \leftmargin 1cm
-\topmargin 1.5cm
 \rightmargin 1cm
-\bottommargin 1.5cm
-\headheight 1.5cm
-\headsep 1.5cm
-\footskip 1.5cm
-\secnumdepth 3
-\tocdepth 3
+\secnumdepth 2
+\tocdepth 2
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle empty
+\paperpagestyle default
 \bullet 0 0 10 -1
 \tracking_changes false
 \output_changes false
@@ -67,6 +62,326 @@
 \end_header
 
 \begin_body
+
+\begin_layout Chapter
+Comparing two groups
+\end_layout
+
+\begin_layout Standard
+Comparison between samples of two independent groups is one of the most
+ commonly used statistical techniques.
+ A parametric test makes estimates about population parameters based on
+ an assumption of distribution.
+ We can have two basic situations: one where we know the population variance
+ (
+\emph on
+Z
+\emph default
+ simple but rarely happens) and one where we don't (
+\emph on
+T 
+\emph default
+distribution).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z=\frac{\bar{X}-\mu}{\sigma}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t=\frac{\bar{X}-\mu}{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general, a simple model of a random variable works like the formulas
+ shown above.
+ by dividing a difference between the observed and expected value by the
+ standard error estimate of this value.
+ This applies only to parametric estimations.
+\end_layout
+
+\begin_layout Section
+T-tests
+\end_layout
+
+\begin_layout Standard
+There are three types of T tests:
+\end_layout
+
+\begin_layout Itemize
+One sample (compare to a known population)
+\end_layout
+
+\begin_layout Itemize
+Independent sample (compare two independently sampled groups: pooled and
+ non-pooled variance depending on assumptions)
+\end_layout
+
+\begin_layout Itemize
+Paired sample (comparing two sets of data obtained from the same sample
+ of matched pairs.
+\end_layout
+
+\begin_layout Subsection
+Assumptions
+\end_layout
+
+\begin_layout Enumerate
+Sampled populations are normal
+\end_layout
+
+\begin_layout Enumerate
+Variances are equal between samples
+\end_layout
+
+\begin_layout Enumerate
+The observations are independent
+\end_layout
+
+\begin_layout Enumerate
+The variables are interval or ratio
+\end_layout
+
+\begin_layout Subsection
+Calculation
+\end_layout
+
+\begin_layout Subsubsection
+Pooled variance
+\end_layout
+
+\begin_layout Standard
+We can assume normality, and test homogeneity of variance by calculating
+ 
+\begin_inset Formula $\frac{S_{1}^{2}}{S_{2}^{2}}$
+\end_inset
+
+ and using the F-distribution.
+ If the variances are equal (statistic below critical), pooled variance
+ test can be used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s_{pooled}^{2}=\frac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t_{statistic}=\frac{(\bar{x}_{1}-\bar{x}_{2})-\mu_{d_{0}}}{\sqrt{\frac{s_{p}^{2}}{n_{1}}+\frac{s_{p}^{2}}{n_{2}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $\mu_{d_{0}}$
+\end_inset
+
+ is the difference between the samples if the null hypothesis is correct.
+ This means that this term is usually zero.
+\end_layout
+
+\begin_layout Standard
+There exists the Levene test for equality of variances, which has the null
+ hypothesis of different variances.
+ Thus, if the Levene p-value is below 0.05, the variances are different.
+\end_layout
+
+\begin_layout Subsubsection*
+Different variances
+\end_layout
+
+\begin_layout Standard
+If the variances are different, we can not use the T distribution as is.
+ Instead, the critical value need to be estimated as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t'_{1-\alpha/2}=\frac{\frac{s_{1}^{2}}{n_{1}}t_{1}+\frac{s_{2}^{2}}{n_{2}}t_{2}}{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Paired sample
+\end_layout
+
+\begin_layout Standard
+Instead of testing the difference of means, we evaluate the mean difference
+ between each measurement:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t=\frac{\frac{\sum d_{i}}{n}-\mu_{d_{0}}}{\frac{s}{\sqrt{n}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, 
+\begin_inset Formula $\mu_{d_{0}}$
+\end_inset
+
+is zero.
+ 
+\begin_inset Formula $\frac{s}{\sqrt{n}}$
+\end_inset
+
+ is the estimate for standard error.
+ This statistic is compared with the T distribution at 
+\emph on
+n-1
+\emph default
+ degrees of freedom.
+ Notice that 
+\emph on
+s 
+\emph default
+is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s=\sqrt{\frac{\sum(d_{i}-\bar{d})^{2}}{n-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Non-parametric testing
+\end_layout
+
+\begin_layout Standard
+If the normality assumption is violated, non-parametric tests are used.
+ They usually only consider the ordering of the data.
+\end_layout
+
+\begin_layout Subsection
+Sign test
+\end_layout
+
+\begin_layout Standard
+Use the binomial distribution to compare the number of observations above
+ and below the expected value (mean).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(k\leq x|n,p)=\sum_{k=0}^{x}\binom{n}{k}p^{k}q^{n-k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\emph on
+p
+\emph default
+ and 
+\emph on
+q 
+\emph default
+are the probabilities of the two outcomes, which is 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ for this test.
+\end_layout
+
+\begin_layout Subsection
+Wilcoxon Signed-rank test
+\end_layout
+
+\begin_layout Standard
+Takes the size of difference from the expected value into consideration.
+ Count the number of observations above and below the expected value.
+ Than for a given total number of observations, compare the value with the
+ critical.
+ Notice that the two-tailed test would have double the probability value
+ for a given observed signed rank sum.
+ For a two-tailed test, either the positive or the negative ranks can be
+ chosen.
+ Notice that lower sums are less likely under the null hypothesis
+\end_layout
+
+\begin_layout Subsection
+Mann-Whitney U
+\end_layout
+
+\begin_layout Standard
+Here we can compare two groups (as opposed to self-comparison or sample
+ vs population as in the previous ones).
+ Very similar procedure to the one above, but with a more sophisticated
+ test statistic:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T=S-\frac{n(n+1)}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\emph on
+S 
+\emph default
+is the rank sum for the tested category and 
+\emph on
+n
+\emph default
+ is the number of samples in that category.
+ Notice that the test statistic distribution is defined on sizes of both
+ groups.
+\end_layout
 
 \begin_layout Chapter
 Comparing multiple groups
@@ -297,10 +612,6 @@ g
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-The statistic is between over within.
 \end_layout
 
 \begin_layout Standard
