@@ -376,18 +376,6 @@ In a problem with multiple features, it would make sense to scale the features
  in order to make the execution quicker.
  By scaling we mean using similar value.
  In terms of the contour plot, we need to circularize the plot.
- Normalizing by the maximum value so that the values are between -1 and
- 1.
- Mean normalization refers to shifting the mean of the feature to 0.
- For example: 
-\begin_inset Formula $x_{1}=\frac{x-\mu}{max(x_{1})}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
